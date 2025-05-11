@@ -135,4 +135,17 @@ public class Lista<T> implements ILista<T> {
 		}
 		return auxiliar;
 	}
+
+
+	@Override
+	public void exibirLista() throws Exception {
+		if(isEmpty()) {
+			throw new Exception("Lista vazia!");
+		}
+		No<T> atual = primeiro;
+		while(atual != null) {
+			System.out.print(atual.dado+" ");
+			atual = atual.proximo;
+		}
+	}
 }
